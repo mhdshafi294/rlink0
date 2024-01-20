@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cairo } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import MouseGlow from "@/components/MouseGlow";
 
 const inter = Inter({ subsets: ["latin"] });
 const cairo = Cairo({ subsets: ["latin"] });
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cairo.className}>
         <Nav />
+        <MouseGlow />
         {children}
       </body>
     </html>

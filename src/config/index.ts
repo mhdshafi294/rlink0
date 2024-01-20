@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   {
     label: "Home",
-    value: "home" as const,
+    value: "/" as const,
   },
   {
     label: "Services",
