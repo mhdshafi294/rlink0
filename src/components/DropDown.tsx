@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const variants = {
   open: {
-    clipPath: "circle(1200px at calc(100% - 1rem) 1rem)",
+    clipPath: "circle(1200px at calc(100% - 2.5rem) 2.5rem)",
     transition: {
       type: "spring",
       stiffness: 20,
     },
   },
   closed: {
-    clipPath: "circle(0px at calc(100% - 1rem) 1rem)",
+    clipPath: "circle(0px at calc(100% - 2.5rem) 2.5rem)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -23,13 +23,12 @@ const variants = {
 interface DropDownProps {
   children: React.ReactNode;
   isOpen: boolean;
-  onClose?: () => void;
 }
 
-const DropDown: React.FC<DropDownProps> = ({ children, isOpen, onClose }) => {
+const DropDown: React.FC<DropDownProps> = ({ children, isOpen }) => {
   return (
     <motion.div
-      className="flex flex-col items-center justify-center text-white bg-slate-950 "
+      className="flex flex-col items-center justify-center text-white bg-slate-950"
       animate={isOpen ? "open" : "closed"}
     >
       <motion.div

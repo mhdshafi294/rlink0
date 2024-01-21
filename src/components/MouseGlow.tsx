@@ -5,11 +5,10 @@ const MouseGlow = () => {
   const blob = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
-    console.log("Hi");
-
-    window.onpointermove = (event) => {
-      const { clientX, clientY } = event;
-
+    window.addEventListener("mousemove", (event) => {
+      const clientX = event.pageX;
+      const clientY = event.pageY;
+      // Do something with these coordinates
       blob?.current?.animate(
         {
           left: `${clientX}px`,
@@ -17,11 +16,11 @@ const MouseGlow = () => {
         },
         { duration: 3000, fill: "forwards" }
       );
-    };
+    });
   }, []);
 
   return (
-    <div className="absolute left-0 top-0 h-full w-full -z-50">
+    <div className="absolute left-0 top-0 h-full w-full -z-50 overflow-hidden">
       <div id="blob" ref={blob}></div>
       <div id="blur"></div>
     </div>

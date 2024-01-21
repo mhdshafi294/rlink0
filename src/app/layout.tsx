@@ -20,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cairo.className}>
-        <Nav />
-        <MouseGlow />
-        {children}
+        <main className="relative flex flex-col min-h-screen ">
+          <Nav />
+          <MouseGlow />
+          <div className="flex-grow flex-1">{children}</div>
+        </main>
       </body>
     </html>
   );

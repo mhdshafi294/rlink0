@@ -32,6 +32,7 @@ body {
   }
 }
 
+/* Mouse glow effect start */
 @keyframes rotate {
   from {
     rotate: 0deg;
@@ -48,7 +49,7 @@ body {
 
 #blob {
   background-color: white;
-  height: 28vmax;
+  height: 34vmax;
   aspect-ratio: 1;
   position: absolute;
   left: 50%;
@@ -68,3 +69,130 @@ body {
   z-index: -98;
   backdrop-filter: blur(12vmax);
 }
+/* Mouse glow effect end */
+
+/* stars bg start */
+@keyframes glowing-stars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.star1 {
+  animation: glowing-stars 2s infinite alternate linear 250ms;
+}
+.star2 {
+  animation: glowing-stars 2s infinite alternate linear 750ms;
+}
+.star3 {
+  animation: glowing-stars 2s infinite alternate linear 900ms;
+}
+.star4 {
+  animation: glowing-stars 2s infinite alternate linear 1s;
+}
+.star5 {
+  animation: glowing-stars 2s infinite alternate linear 2s;
+}
+.star6 {
+  animation: glowing-stars 2s infinite alternate linear 500ms;
+}
+.star7 {
+  animation: glowing-stars 2s infinite alternate linear 660ms;
+}
+.star8 {
+  animation-name: glowing-stars 2s infinite alternate linear;
+}
+/* stars bg end */
+
+/* rotating border start */
+.fancy {
+  --offset: 2px;
+  overflow: hidden;
+}
+/* Conic gradient */
+.fancy::before {
+  content: "";
+  background: conic-gradient(
+    transparent 270deg,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+/* Overlay */
+.fancy::after {
+  content: "";
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 1 * var(--offset));
+  width: calc(100% - 1 * var(--offset));
+  transform: translate(-1px, -1px);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* rotating border end */
+
+/* planet separator start */
+.planet_separator {
+  mask-image: radial-gradient(circle, black, transparent 80%);
+  margin: -128px auto;
+}
+.planet_separator::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: radial-gradient(
+    circle at bottom center,
+    #7877c6,
+    transparent 70%
+  );
+  opacity: 0.4;
+}
+.planet_separator::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 200%;
+  left: -50%;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 50%;
+  border-top: 1px solid rgba(120, 118, 197, 0.4);
+  top: 50%;
+  z-index: 90;
+}
+
+.radial_mask {
+  mask-image: radial-gradient(circle at center bottom, black, transparent);
+}
+/* planet separator end */

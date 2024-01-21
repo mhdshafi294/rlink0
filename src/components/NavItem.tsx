@@ -9,7 +9,7 @@ const NavItem: React.FC<UpperNavbarProps> = ({ label, value }) => {
   return (
     <Link
       href={value}
-      className="group rounded-full border border-transparent transition duration-200 px-4 py-2 hover:bg-gradient-to-r hover:from-green-400/20 hover:to-sky-500/20"
+      className="group rounded-md border border-transparent transition duration-200 px-4 py-2  hover:bg-transparent hover:shadow-lg"
       target="_blank"
     >
       <p
