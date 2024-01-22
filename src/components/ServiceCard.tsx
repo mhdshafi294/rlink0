@@ -37,7 +37,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       transition={{ delay: 0.2 * index }}
       variants={variants}
     >
-      <div className="group-hover:-translate-y-6 duration-500">
+      <div className="group-hover:scale-110 duration-500">
         <div>
           <Image
             className="group-hover:translate-x-[90%] duration-300"

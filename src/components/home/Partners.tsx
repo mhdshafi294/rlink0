@@ -5,6 +5,17 @@ import Stars from "../Stars";
 const Partners = () => {
   return (
     <div id="partners" className="relative w-full overflow-hidden">
+      <div className="absolute w-full h-full">
+        {/* stars start */}
+        <div className="star1 absolute top-[30%] left-[10%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star2 absolute top-[30%] left-[70%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star3 absolute top-[10%] left-[20%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star4 absolute top-[7%] left-[50%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star5 absolute top-[50%] left-[8%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star6 absolute top-[34%] left-[28%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        <div className="star7 absolute top-[25%] left-[68%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
+        {/* stars end */}
+      </div>
       <Container>
         <div className="flex flex-col justify-center items-center pt-24">
           <h2 className="text-center text-xl sm:text-5xl font-bold tracking-[-0.02em] leading-[1.3] mt-0 mb-16 text-slate-300">

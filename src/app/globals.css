@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -196,3 +200,64 @@ body {
   mask-image: radial-gradient(circle at center bottom, black, transparent);
 }
 /* planet separator end */
+
+/* hyper cards start */
+
+.hyper_cards:hover > .hyper_card::after {
+  opacity: 1;
+}
+
+.hyper_card:hover::before {
+  opacity: 1;
+}
+
+.hyper_card > .hyper_card_content {
+  z-index: 2;
+}
+
+.hyper_card::before,
+.hyper_card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.hyper_card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.hyper_card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  z-index: 1;
+}
+/* hyper cards end */
+
+/* Orbit start */
+.circle-orbit-container {
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* Orbit end */
