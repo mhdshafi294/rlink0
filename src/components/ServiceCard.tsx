@@ -11,8 +11,8 @@ const variants = {
   },
   hidden: {
     scale: 0.9,
-    opacity: 0.5,
-    y: 150,
+    opacity: 0,
+    y: 100,
   },
 };
 

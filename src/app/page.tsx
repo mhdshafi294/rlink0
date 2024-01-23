@@ -3,6 +3,7 @@ import Partners from "@/components/home/Partners";
 import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
+import FAQ from "./../components/home/FAQ";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Services />
       <Projects />
       <WhyUs />
+      <FAQ />
     </>
   );
 }

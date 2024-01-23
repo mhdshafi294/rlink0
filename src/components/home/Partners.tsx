@@ -18,7 +18,7 @@ const Partners = () => {
       </div>
       <Container>
         <div className="flex flex-col justify-center items-center pt-24">
-          <h2 className="text-center text-xl sm:text-5xl font-bold tracking-[-0.02em] leading-[1.3] mt-0 mb-16 text-slate-300">
+          <h2 className="text-center text-xl sm:text-5xl font-bold tracking-[-0.02em] leading-[1.3] mt-0 mb-16 text-white">
             Our Partners
           </h2>
           <p className="text-slate-300 text-center text-[22px] leading-[1.3] font-normal mt-0 mb-[72px] mx-0">

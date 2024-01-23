@@ -36,6 +36,30 @@ body {
   }
 }
 
+/* scrollbar start */
+/* width */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(32, 32, 32);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: radial-gradient(
+    circle,
+    rgba(16, 164, 144, 1) 0%,
+    rgba(12, 114, 180, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 10px;
+}
+/* scrollbar end */
+
 /* Mouse glow effect start */
 @keyframes rotate {
   from {
@@ -248,16 +272,5 @@ body {
 /* hyper cards end */
 
 /* Orbit start */
-.circle-orbit-container {
-}
 
-@keyframes spin-right {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 /* Orbit end */

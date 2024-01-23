@@ -26,7 +26,7 @@ const Nav = () => {
             height={60}
             className="object-contain"
           />
-          <p className="logo_text">R-LINK</p>
+          <p className="logo_text text-xl">R-LINK</p>
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ const Nav = () => {
                 onClick={() => {
                   setUser(false);
                 }}
-                className="font-medium text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg"
+                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg duration-300"
               >
                 Sign Out
               </button>
@@ -67,12 +67,15 @@ const Nav = () => {
                 onClick={() => {
                   setUser(true);
                 }}
-                className="font-medium text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg"
+                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg duration-300"
               >
                 Log in
               </button>
               <a
                 href="#"
+                onClick={() => {
+                  setUser(true);
+                }}
                 className="relative inline-flex items-center justify-center px-4 py-1.5 overflow-hidden font-medium text-sm text-indigo-600 rounded-full shadow-2xl group mr-2 "
               >
                 <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-green-600 rounded-full blur-md ease"></span>
@@ -80,7 +83,9 @@ const Nav = () => {
                   <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-teal-500 rounded-full blur-md"></span>
                   <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-sky-600 rounded-full blur-md"></span>
                 </span>
-                <span className="relative text-white">Sign Up</span>
+                <span className="relative text-slate-300 hover:text-white duration-300">
+                  Sign Up
+                </span>
               </a>
             </div>
           )}
