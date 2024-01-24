@@ -1,7 +1,9 @@
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+
 export const NAV_LINKS = [
   {
     label: "Home",
-    value: "#" as const,
+    value: "/" as const,
   },
   {
     label: "Partners",
@@ -121,5 +123,39 @@ export const FAQs = [
     question: "The most popular question",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. At sit ut nulla eu stetur eget. Nec, ac, sollicitudin aliquam ut egestas duis dolor. \n Congue suspendisse  aliquam ut egestas duis dolor. Congue suspendisse consectetur adipiscing elit. At sit ut nulla eu stetur eget. Nec, ac, sollicitudin aliquam ut egestas duis dolor. \n Congue suspendisse  aliquam ut egestas duis dolor. Congue suspendiss consectetur adipiscing elit. ",
+  },
+];
+
+export const COMMUNITY_LINKS = [
+  {
+    link: "https://instagram.com/r_link.io?igshid=OGQ5ZDc2ODk2ZA==",
+    Icon: Instagram,
+    name: "Instagram",
+    className:
+      "bg-gradient-to-r from-indigo-500/5 via-purple-500/5 to-pink-500/5 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500",
+  },
+  {
+    link: "https://www.facebook.com/werlink.co?mibextid=ZbWKwL",
+    Icon: Facebook,
+    name: "Facebook",
+    className: "bg-blue-700/5 hover:bg-blue-700",
+  },
+  {
+    link: "tel:+963 994778777",
+    Icon: "/whatsapp.svg",
+    name: "Whatsapp",
+    className: "bg-green-700/5 hover:bg-green-700",
+  },
+  {
+    link: "mailto:info@r-link.io",
+    Icon: Mail,
+    name: "Mail",
+    className: "bg-red-700/5 hover:bg-red-700",
+  },
+  {
+    link: "https://www.linkedin.com/company/werlinkco/",
+    Icon: Linkedin,
+    name: "Linkedin",
+    className: "bg-sky-700/10 hover:bg-sky-700",
   },
 ];

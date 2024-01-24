@@ -4,10 +4,12 @@ import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
 import FAQ from "./../components/home/FAQ";
+import MouseGlow from "@/components/MouseGlow";
 
 export default function Home() {
   return (
     <>
+      <MouseGlow />
       <Hero />
       <Partners />
       <svg

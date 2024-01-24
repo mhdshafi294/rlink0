@@ -18,14 +18,14 @@ const FAQ = () => {
             {FAQs.map((question, index) => {
               return index === 0 ? (
                 <ExpandedText
-                  key={question.question}
+                  key={index}
                   label={question.question}
                   details={question.answer}
                   isOpen={true}
                 />
               ) : (
                 <ExpandedText
-                  key={question.question}
+                  key={index}
                   label={question.question}
                   details={question.answer}
                 />

@@ -62,16 +62,14 @@ const Nav = () => {
             </div>
           ) : (
             <div className="flex items-center gap-3 md:gap-5">
-              <button
-                type="button"
-                onClick={() => {
-                  setUser(true);
-                }}
+              <Link
                 className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg duration-300"
+                href="/login"
               >
                 Log in
-              </button>
-              <a
+              </Link>
+
+              <Link
                 href="#"
                 onClick={() => {
                   setUser(true);
@@ -86,7 +84,7 @@ const Nav = () => {
                 <span className="relative text-slate-300 hover:text-white duration-300">
                   Sign Up
                 </span>
-              </a>
+              </Link>
             </div>
           )}
         </div>
