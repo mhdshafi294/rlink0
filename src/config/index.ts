@@ -7,23 +7,27 @@ export const NAV_LINKS = [
   },
   {
     label: "Partners",
-    value: "#partners" as const,
+    value: "/#partners" as const,
   },
   {
     label: "Services",
-    value: "#services" as const,
+    value: "/#services" as const,
   },
   {
     label: "Projects",
-    value: "#projects" as const,
+    value: "/#projects" as const,
   },
   {
     label: "Why Us",
-    value: "#whyUs" as const,
+    value: "/#whyUs" as const,
   },
   {
     label: "FAQ",
-    value: "#faq" as const,
+    value: "/#faq" as const,
+  },
+  {
+    label: "White Label",
+    value: "/white-label" as const,
   },
 ];
 

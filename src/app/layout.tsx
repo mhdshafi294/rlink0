@@ -24,7 +24,6 @@ export default function RootLayout({
       <body className={cairo.className}>
         <main className="relative flex flex-col min-h-screen ">
           <Nav />
-
           <div className="flex-grow flex-1">{children}</div>
           <Footer />
         </main>

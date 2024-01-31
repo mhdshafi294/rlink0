@@ -20,7 +20,7 @@ const MouseGlow = () => {
   }, []);
 
   return (
-    <div className="absolute left-0 top-0 h-full w-full -z-50 overflow-hidden">
+    <div className="absolute left-0 top-0 h-full w-full -z-50 overflow-hidden ">
       <div id="blob" ref={blob}></div>
       <div id="blur"></div>
     </div>

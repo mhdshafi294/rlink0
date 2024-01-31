@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
           <div className="group isolate px-6 py-2 rounded-3xl bg-teal-950/90 shadow-none hover:shadow-lg overflow-hidden fancy relative w-40 h-10 transition-all duration-500">
             <Link
-              href={`#`}
+              href="/register"
               className="z-10 bg-transparent absolute inset-0 text-center text-lg pt-1.5 text-white/70 group-hover:text-white duration-200"
             >
               Subscribe

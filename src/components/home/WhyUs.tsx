@@ -2,12 +2,13 @@ import Image from "next/image";
 import { BookOpenCheck, SquareDashedBottomCode } from "lucide-react";
 
 import Container from "../Container";
+import Link from "next/link";
 
 const WhyUs = () => {
   return (
     <div
       id="whyUs"
-      className="bg-gradient-to-b from-[#010c13] to-[#021c18] overflow-hidden pb-28 md:py-0 md:min-h-screen"
+      className="bg-gradient-to-b from-[#010c13] to-[#021c18] overflow-hidden py-28 md:py-0 md:min-h-screen"
     >
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-center md:h-screen">
@@ -23,8 +24,8 @@ const WhyUs = () => {
               mollitia, molestiae quas vel sint commodi repudiandae
               consequuntur.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/register"
               className="relative w-36 h-12 inline-flex items-center justify-center px-4 py-1.5 overflow-hidden font-medium text-sm text-indigo-600 rounded-full shadow-2xl group mr-2 "
             >
               <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-green-600 rounded-full blur-md ease"></span>
@@ -33,7 +34,7 @@ const WhyUs = () => {
                 <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-sky-600 rounded-full blur-md"></span>
               </span>
               <span className="relative text-white text-lg">Get Started</span>
-            </a>
+            </Link>
           </div>
           <div className="right_side md:w-1/2 flex justify-center items-center relative min-h-screen">
             <div id="circle_orbit_container relative w-full h-full">

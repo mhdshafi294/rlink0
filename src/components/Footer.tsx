@@ -43,10 +43,10 @@ const Footer = () => {
               {COMMUNITY_LINKS.map((link, index) => (
                 <CommunityLink
                   key={link.link}
+                  className={link.className}
                   link={link.link}
                   Icon={link.Icon}
                   name={link.name}
-                  className={link.className}
                 />
               ))}
             </div>
