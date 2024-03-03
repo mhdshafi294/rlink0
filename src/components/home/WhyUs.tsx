@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BookOpenCheck, SquareDashedBottomCode } from "lucide-react";
+import { BookOpenCheck, Mail, SquareDashedBottomCode } from "lucide-react";
 
 import Container from "../Container";
 import Link from "next/link";
@@ -8,35 +8,46 @@ const WhyUs = () => {
   return (
     <div
       id="whyUs"
-      className="bg-gradient-to-b from-[#010c13] to-[#021c18] overflow-hidden py-28 md:py-0 md:min-h-screen"
+      className="bg-gradient-to-b from-[#010c13] to-[#021c18] overflow-hidden pt-28"
     >
       <Container>
-        <div className="flex flex-col md:flex-row justify-between items-center md:h-screen">
-          <div className="left_side flex flex-col items-start justify-start md:w-5/12">
-            <h4 className="mb-2 font-normal text-white/70 leading-loose tracking-tight text-lg">
-              WHY CHOOSE US
+        <div className="group isolate px-4 py-2 rounded-3xl bg-[#041d18f5] shadow-none hover:shadow-lg overflow-hidden fancy relative w-[150px] h-9 transition-all duration-500 mx-auto mb-2 md:mb-0">
+          <p className="z-10 bg-transparent absolute inset-0 text-center pt-1.5 text-whie/90 group-hover:text-white duration-200 capitalize">
+            The right choose
+          </p>
+        </div>
+        <h2 className="text-center text-[40px] leading-[48px] sm:text-5xl font-bold tracking-[-0.02em] sm:leading-[80px] mb-12 md:mb-0">
+          Why Choose Us
+        </h2>
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-0">
+          <div className="left_side flex flex-col items-start justify-start md:w-8/12 lg:w-5/12">
+            <h4 className="font-normal text-white/70 leading-loose tracking-tight text-lg">
+              Your victory is our mission.
             </h4>
-            <h3 className="mb-6 text-5xl font-semibold leading-[77px] lead tracking-wide">
-              Build a Brand That Your Customers Love
+            <h3 className="mb-6 text-3xl md:text-4xl font-bold">
+              Why settle for the ordinary when you can have the extraordinary?
             </h3>
-            <p className="mb-6 text-opacity-70 text-lg font-thin tracking-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae
-              consequuntur.
+            <p className="mb-6 text-opacity-70 text-base font-extralight tracking-normal">
+              Innovative Solutions, Eye-catching Design, Seamless Development,
+              Passionate about Your Success Ready to elevate your brand?
+              Together, we&apos;ll make magic happen.
             </p>
             <Link
-              href="/register"
-              className="relative w-36 h-12 inline-flex items-center justify-center px-4 py-1.5 overflow-hidden font-medium text-sm text-indigo-600 rounded-full shadow-2xl group mr-2 "
+              href="mailto:info@r-link.io"
+              className="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium text-sm rounded-full shadow-2xl group mr-2"
             >
               <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-green-600 rounded-full blur-md ease"></span>
               <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
                 <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-teal-500 rounded-full blur-md"></span>
                 <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-sky-600 rounded-full blur-md"></span>
               </span>
-              <span className="relative text-white text-lg">Get Started</span>
+
+              <span className="relative text-white text-lg flex gap-2 items-center">
+                <Mail /> Get Started
+              </span>
             </Link>
           </div>
-          <div className="right_side md:w-1/2 flex justify-center items-center relative min-h-screen">
+          <div className="right_side md:w-1/2 flex justify-center items-center relative min-h-[720px]">
             <div id="circle_orbit_container relative w-full h-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +55,7 @@ const WhyUs = () => {
                 height="125"
                 viewBox="0 0 125 125"
                 fill="none"
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 "
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               >
                 <path
                   fillRule="evenodd"
@@ -137,15 +148,20 @@ const WhyUs = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <Image
+              {/* <Image
                 src="/RLink_Logo1.png"
                 alt="logo"
                 width={120}
                 height={120}
                 className="object-contain animate-spin animate-infinite animate-duration-[15000ms] animate-ease-linear"
+              /> */}
+              <img
+                src="/RLink_Logo1.png"
+                alt="logo"
+                className="w-[120px] h-[120px] object-contain animate-spin animate-infinite animate-duration-[15000ms] animate-ease-linear"
               />
-              <div className="mid animate-spin animate-infinite animate-duration-[60000ms] animate-delay-[16000ms] animate-ease-linear relative">
-                <div className="animate-spin animate-infinite animate-duration-[60000ms] animate-delay-[16000ms] animate-ease-linear animate-reverse absolute left-28 top-1/3 inner_orbit_cirlces w-64 h-[140px] bg-gradient-to-br from-white/5 to-teal-950/10 flex justify-center items-center rounded-3xl shadow-1g ring-1 ring-black/5 backdrop-blur-lg z-20">
+              <div className="mid animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear relative">
+                <div className="animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear animate-reverse absolute left-0 -top-64 inner_orbit_cirlces w-64 h-[150px] bg-gradient-to-br from-white/5 to-teal-950/10 flex justify-center items-center rounded-3xl shadow-1g ring-1 ring-black/5 backdrop-blur-lg z-20">
                   <div className="h-full w-full flex flex-col gap-4 justify-start items-start p-7">
                     <div className="flex justify-between items-center w-[90%]">
                       <h5 className="text-white text-lg font-semibold capitalize leading-tight">
@@ -159,14 +175,14 @@ const WhyUs = () => {
                       </div>
                     </div>
                     <p className="text-opacity-70 text-xs font-thin tracking-tight">
-                      High end quality, Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Maxime.
+                      Our services&apos; hallmark sets us apart in a sea of
+                      options. crafting every detail perfectly
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="mid animate-spin animate-infinite animate-duration-[60000ms] animate-delay-[35000ms] animate-ease-linear relative">
-                <div className="animate-spin animate-infinite animate-duration-[60000ms] animate-delay-[35000ms] animate-ease-linear animate-reverse absolute left-28 top-1/3 inner_orbit_cirlces w-64 h-[180px] bg-gradient-to-br from-white/5 to-teal-950/10 flex justify-center items-center rounded-3xl shadow-1g ring-1 ring-black/5 backdrop-blur-lg z-20">
+              <div className="mid animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear relative -top-10">
+                <div className="animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear animate-reverse absolute -left-72 -top-36 inner_orbit_cirlces w-64 h-[180px] bg-gradient-to-br from-white/5 to-teal-950/10 flex justify-center items-center rounded-3xl shadow-1g ring-1 ring-black/5 backdrop-blur-lg z-20">
                   <div className="h-full w-full flex flex-col justify-center items-center p-7 gap-3">
                     <div className=" p-2 rounded-lg bg-gradient-to-t from-[#010c13] to-[#010c13] shadow-lg ring-1 ring-black/5">
                       <BookOpenCheck
@@ -177,9 +193,9 @@ const WhyUs = () => {
                     <h5 className="text-white text-base font-semibold capitalize leading-tight text-center">
                       Reliability
                     </h5>
-                    <p className="text-opacity-70 text-xs font-thin tracking-tight text-center">
-                      High end quality, Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Maxime.
+                    <p className="text-opacity-70 text-xs font-thin tracking-tight text-center ">
+                      Means you can rely on us. We are your rock-solid partner
+                      for dependable service excellence.
                     </p>
                   </div>
                 </div>
@@ -187,12 +203,17 @@ const WhyUs = () => {
               <div className="inner_orbit animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear relative z-0">
                 <div className="animate-spin animate-infinite animate-duration-[60000ms] animate-ease-linear animate-reverse absolute left-12 top-0 inner_orbit_cirlces w-[256px] h-[238px] bg-gradient-to-br from-white/5 to-teal-950/5 flex justify-center items-center rounded-3xl shadow-1g ring-1 ring-black/5 backdrop-blur-lg z-20 p-7">
                   <div className="h-full w-full lex justify-center items-center">
-                    <Image
+                    {/* <Image
                       src="/onlineAnalysis.svg"
                       alt="logo"
                       width={216}
                       height={194}
                       className="object-contain"
+                    /> */}
+                    <img
+                      src="/onlineAnalysis.svg"
+                      alt="logo"
+                      className="object-contain w-[216px] h-[194px]"
                     />
                   </div>
                 </div>

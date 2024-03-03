@@ -12,7 +12,7 @@ const variants = {
   closed: {
     clipPath: "circle(0px at calc(100% - 2.5rem) 2.5rem)",
     transition: {
-      delay: 0.5,
+      delay: 0,
       type: "spring",
       stiffness: 400,
       damping: 40,
@@ -32,7 +32,7 @@ const DropDown: React.FC<DropDownProps> = ({ children, isOpen }) => {
       animate={isOpen ? "open" : "closed"}
     >
       <motion.div
-        className=" z-40 fixed top-0 right-0 bottom-0 w-screen bg-slate-950"
+        className=" z-[998] fixed top-0 right-0 bottom-0 w-screen bg-slate-950"
         variants={variants}
       >
         {children}

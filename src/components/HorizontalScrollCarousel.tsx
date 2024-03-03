@@ -1,11 +1,12 @@
 "use client";
 
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import { useRef } from "react";
+import StarsCard from "./StarsCard";
 
 const Example = () => {
   return (
-    <div className="bg-neutral-800">
+    <div className="">
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll down
@@ -26,13 +27,17 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-73%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
+    <section ref={targetRef} className="relative h-[300vh] ">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
+        <motion.div style={{ x }} className="flex gap-[0vw] ">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -46,18 +51,12 @@ const Card = ({ card }: { card: CardType }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-screen w-[50vw] overflow-hidden rounded-xl "
     >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
+      <div className="absolute w-[100%] h-[0%] bg-gradient-to-b from-[#010c13] to-[#021c18] inset-y-1/2 z-0 transition-all duration-500 group-hover:h-[100%] group-hover:inset-y-0"></div>
+      <StarsCard />
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className=" p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
           {card.title}
         </p>
       </div>
@@ -76,37 +75,37 @@ type CardType = {
 const cards: CardType[] = [
   {
     url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
+    title: "project 1",
     id: 1,
   },
   {
     url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    title: "project 2",
     id: 2,
   },
   {
     url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
+    title: "project 3",
     id: 3,
   },
   {
     url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
+    title: "project 4",
     id: 4,
   },
   {
     url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
+    title: "project 5",
     id: 5,
   },
   {
     url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
+    title: "project 6",
     id: 6,
   },
   {
     url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
+    title: "project 7",
     id: 7,
   },
 ];

@@ -31,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="group justify-between relative flex flex-col hover:items-center duration-300"
+      className="group justify-between relative flex flex-col hover:items-center duration-500"
       initial="hidden"
       whileInView="visible"
       transition={{ delay: 0.2 * index }}
@@ -39,12 +39,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     >
       <div className="group-hover:scale-110 duration-500">
         <div>
-          <Image
+          {/* <Image
             className="group-hover:translate-x-[90%] duration-300"
             src={icon}
             alt={`${label} icon`}
             width={90}
             height={90}
+          /> */}
+          <img
+            src={icon}
+            alt={`${label} icon`}
+            className="w-[90px] h-[90px] group-hover:translate-x-[90%] duration-500"
           />
         </div>
         <h4 className="font-PP-Mori text-xl md:text-2xl leading-6 md:leading-[29px] text-white mt-2">

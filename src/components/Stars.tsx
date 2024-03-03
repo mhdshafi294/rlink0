@@ -2,7 +2,7 @@ import React from "react";
 
 const Stars = () => {
   return (
-    <div className="absolute w-full h-full">
+    <div className="absolute w-full h-full -z-50">
       {/* stars start */}
       <div className="star1 absolute top-[20%] left-[10%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>
       <div className="star2 absolute top-[30%] left-[80%] w-[3px] h-[3px] bg-white rounded-full opacity-50"></div>

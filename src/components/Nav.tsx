@@ -16,63 +16,79 @@ const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   return (
-    <div className="w-full self-center max-w-7xl lg:w-7xl lg:px-0 md:px-6 px-3">
-      <nav className="  flex justify-between items-center w-full pt-3 z-20 mx-auto max-w-7xl md:px-0 px-5">
+    <div className="w-full self-center max-w-7xl lg:w-7xl xl:px-0 md:px-6 px-3">
+      <nav className="  flex justify-between items-center w-full pt-3 z-20 mx-auto max-w-7xl md:px-0 px-0">
         <Link href="/" className="flex justify-start items-center gap-2">
-          <Image
+          {/* <Image
             src="/RLink_Logo1.png"
             alt="logo"
             width={60}
             height={60}
             className="object-contain"
+          /> */}
+          <img
+            src="/RLink_Logo1.png"
+            alt="logo"
+            className="object-contain w-[60px] h-[60px]"
           />
           <p className="logo_text text-xl">R-LINK</p>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <ul className="flex items-center justify-between ">
-            {NAV_LINKS.map((item) => (
-              <NavItem key={item.value} label={item.label} value={item.value} />
-            ))}
+            {NAV_LINKS.map((item) => {
+              if (item.label !== "Why Choose Us?")
+                return (
+                  <NavItem
+                    key={item.value}
+                    label={item.label}
+                    value={item.value}
+                  />
+                );
+            })}
           </ul>
         </div>
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           {user ? (
-            <div className="flex gap-3 md:gap-5">
+            <div className="flex gap-3 lg:gap-5">
               <button
                 type="button"
                 onClick={() => {
                   setUser(false);
                 }}
-                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg duration-300"
+                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 duration-300"
               >
                 Sign Out
               </button>
               <Link href="/profile">
-                <Image
+                {/* <Image
                   src="/profilePic.webp"
                   width={37}
                   height={37}
                   className="rounded-full"
                   objectFit="cover"
                   alt="profile"
+                /> */}
+                <img
+                  src="/profilePic.webp"
+                  alt="profile"
+                  className="object-contain rounded-full w-9 h-9"
                 />
               </Link>
             </div>
           ) : (
-            <div className="flex items-center gap-3 md:gap-5">
-              <Link
-                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 hover:bg-transparent hover:shadow-lg duration-300"
+            <div className="flex items-center gap-3 lg:gap-5">
+              {/* <Link
+                className="font-medium text-slate-300 hover:text-white text-sm px-2 py-2 duration-300"
                 href="/login"
               >
                 Log in
-              </Link>
+              </Link> */}
 
               <Link
-                href="/register"
-                onClick={() => {}}
-                className="relative inline-flex items-center justify-center px-4 py-1.5 overflow-hidden font-medium text-sm text-indigo-600 rounded-full shadow-2xl group mr-2 "
+                href="/#whyUs"
+                className="relative inline-flex items-center justify-center px-5 py-2 overflow-hidden font-medium text-sm text-indigo-600 rounded-full shadow-2xl group "
               >
                 <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-green-600 rounded-full blur-md ease"></span>
                 <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
@@ -80,7 +96,7 @@ const Nav = () => {
                   <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-sky-600 rounded-full blur-md"></span>
                 </span>
                 <span className="relative text-slate-100 hover:text-white duration-300">
-                  Sign Up
+                  Why R-link
                 </span>
               </Link>
             </div>
@@ -88,12 +104,12 @@ const Nav = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="relative flex flex-col md:hidden">
+        <div className="relative flex flex-col lg:hidden">
           <div
-            onClick={() => setToggleDropdown(!toggleDropdown)}
-            className="mr-2 absolute right-1 -top-2 z-50"
+            onClick={() => setToggleDropdown((prev) => !prev)}
+            className="mr-2 absolute right-1 -top-2 z-[999]"
           >
-            <AlignRight className="h-5 w-5" />
+            <AlignRight className="h-5 w-5 z-[999]" />
           </div>
 
           <DropDown isOpen={toggleDropdown}>
@@ -104,9 +120,10 @@ const Nav = () => {
                     key={item.value}
                     label={item.label}
                     value={item.value}
+                    onChange={() => setToggleDropdown(false)}
                   />
                 ))}
-                <Link
+                {/* <Link
                   href="/profile"
                   className="text-xl"
                   onClick={() => setToggleDropdown(false)}
@@ -122,7 +139,7 @@ const Nav = () => {
                   className="text-xl"
                 >
                   Sign Out
-                </button>
+                </button> */}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center gap-10 mx-auto my-auto w-screen h-screen">
@@ -131,9 +148,10 @@ const Nav = () => {
                     key={item.value}
                     label={item.label}
                     value={item.value}
+                    onChange={() => setToggleDropdown(false)}
                   />
                 ))}
-                <button
+                {/* <button
                   type="button"
                   onClick={() => {
                     setUser(true);
@@ -142,7 +160,7 @@ const Nav = () => {
                   className="text-xl"
                 >
                   Log In
-                </button>
+                </button> */}
               </div>
             )}
           </DropDown>

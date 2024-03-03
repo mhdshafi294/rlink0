@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 import {
   Facebook,
   Instagram,
@@ -15,7 +15,7 @@ import CommunityLink from "./CommunityLink";
 
 const Footer = () => {
   return (
-    <div className=" py-20 bg-gradient-to-b from-black">
+    <div className=" pt-20 pb-5 bg-gradient-to-b from-black">
       <Container>
         <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-end w-full mb-6">
           <div className="flex flex-col justify-end items-start">
@@ -24,7 +24,7 @@ const Footer = () => {
               Location Al-malki-Damascus-Syria
             </h6>
           </div>
-          <div className="flex md:grid md:grid-cols-2 w-full md:w-auto py-7 md:pt-0 justify-between items-center md:justify-end md:items-start">
+          <div className="gap-2 grid grid-cols-2 w-full md:w-auto py-7 md:pt-0 justify-between items-center flex-wrap">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.value}
@@ -39,7 +39,7 @@ const Footer = () => {
             <h6 className="mt-5 mb-4 tracking-widest text-2xl ">
               Join Our Community
             </h6>
-            <div className="mt-5 flex">
+            <div className="mt-5 flex gap-3">
               {COMMUNITY_LINKS.map((link, index) => (
                 <CommunityLink
                   key={link.link}
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         <hr className="w-full my-9" />
         <div className="flex justify-center items-center mb-6">
-          <p>© Copyright 2023 | © All rights reserved</p>
+          <p>© Copyright 2024 | © All rights reserved</p>
         </div>
       </Container>
     </div>

@@ -7,43 +7,43 @@ import Link from "next/link";
 
 import Container from "@/components/Container";
 
-export const signUpSchema = z
-  .object({
-    name: z.string().min(2, "User Name must be at least 2 characters"),
-    email: z.string().email(),
-    password: z.string().min(8, "Password must be at least 8 characters"),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords must match",
-    path: ["confirmPassword"],
-  });
+// export const signUpSchema = z
+//   .object({
+//     name: z.string().min(2, "User Name must be at least 2 characters"),
+//     email: z.string().email(),
+//     password: z.string().min(8, "Password must be at least 8 characters"),
+//     confirmPassword: z.string(),
+//   })
+//   .refine((data) => data.password === data.confirmPassword, {
+//     message: "Passwords must match",
+//     path: ["confirmPassword"],
+//   });
 
-export type TSignUpSchema = z.infer<typeof signUpSchema>;
+// export type TSignUpSchema = z.infer<typeof signUpSchema>;
 
 const RegisterPage = () => {
-  const {
-    register,
-    handleSubmit,
-    setError,
-    formState: { errors, isSubmitting },
-  } = useForm<TSignUpSchema>({
-    defaultValues: {
-      email: "test@email.com",
-    },
-    resolver: zodResolver(signUpSchema),
-  });
+  //   const {
+  //     register,
+  //     handleSubmit,
+  //     setError,
+  //     formState: { errors, isSubmitting },
+  //   } = useForm<TSignUpSchema>({
+  //     defaultValues: {
+  //       email: "test@email.com",
+  //     },
+  //     resolver: zodResolver(signUpSchema),
+  //   });
 
-  const onSubmit: SubmitHandler<TSignUpSchema> = async (data) => {
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log(data);
-    } catch (error) {
-      setError("root", {
-        message: "This email is already taken",
-      });
-    }
-  };
+  //   const onSubmit: SubmitHandler<TSignUpSchema> = async (data) => {
+  //     try {
+  //       await new Promise((resolve) => setTimeout(resolve, 1000));
+  //       console.log(data);
+  //     } catch (error) {
+  //       setError("root", {
+  //         message: "This email is already taken",
+  //       });
+  //     }
+  //   };
 
   return (
     <div className="flex justify-between items-center min-h-screen w-full fancy_border_radius1_container overflow-hidden">

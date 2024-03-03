@@ -2,7 +2,6 @@ import Container from "../Container";
 
 import { SERVICES } from "@/config";
 import ServiceCard from "../ServiceCard";
-import Image from "next/image";
 
 const Services = () => {
   return (
@@ -12,11 +11,11 @@ const Services = () => {
     >
       <Container>
         <section className="pt-[80px] relative">
-          <h2 className="text-center text-xl sm:text-5xl font-bold tracking-[-0.02em] leading-[1.3] mt-0 mb-12 text-slate-300">
+          <h2 className="text-center text-xl sm:text-5xl font-bold tracking-[-0.02em] leading-[1.3] mt-0 mb-12 text-white">
             Our Services
           </h2>
-          <h3 className="whitespace-pre-wrap lg:whitespace-normal w-auto lg:w-full pb-10 md:pb-10 relative z-50 px-12 xl:px-0 text-slate-300 text-center text-[32px] leading-[1.3] font-normal mt-0 mb-[96px] mx-0">
-            Your engine for blazingly fast application data
+          <h3 className="whitespace-pre-wrap lg:whitespace-normal w-auto lg:w-full pb-10 md:pb-10 relative z-50 px-12 xl:px-0 text-slate-100 text-center text-[32px] leading-[1.3] font-normal mt-0 mb-[96px] mx-0">
+            The perfect solution for your business
           </h3>
           <div className=" mb-14 md:mb-20 z-50 relative">
             <div

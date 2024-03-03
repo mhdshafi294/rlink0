@@ -35,7 +35,7 @@ const ExpandedText: React.FC<ExpandedTextProps> = ({
       </div>
       <div
         className={`${
-          expand ? "h-24 md:h-20" : "h-0"
+          expand ? "h-56 md:h-32" : "h-0"
         } overflow-hidden duration-700 flex flex-col justify-center items-start tracking-wider text-slate-100 text-sm md:text-base`}
       >
         <p className="text-slate-200 font-light">{details}</p>
