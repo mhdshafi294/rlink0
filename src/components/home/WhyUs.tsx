@@ -20,14 +20,14 @@ const WhyUs = () => {
           Why Choose Us
         </h2>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-0">
-          <div className="left_side flex flex-col items-start justify-start md:w-8/12 lg:w-5/12">
-            <h4 className="font-normal text-white/70 leading-loose tracking-tight text-lg">
+          <div className="left_side flex flex-col items-center md:items-start justify-start md:w-8/12 lg:w-5/12">
+            <h4 className="font-normal text-white/70 leading-loose tracking-tight text-lg text-center md:text-left">
               Your victory is our mission.
             </h4>
-            <h3 className="mb-6 text-3xl md:text-4xl font-bold">
+            <h3 className="mb-6 text-3xl md:text-4xl font-bold text-center md:text-left">
               Why settle for the ordinary when you can have the extraordinary?
             </h3>
-            <p className="mb-6 text-opacity-70 text-base font-extralight tracking-normal">
+            <p className="mb-6 text-opacity-70 text-base font-extralight tracking-normal text-center md:text-left">
               Innovative Solutions, Eye-catching Design, Seamless Development,
               Passionate about Your Success Ready to elevate your brand?
               Together, we&apos;ll make magic happen.

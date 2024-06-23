@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <div className=" pt-20 pb-5 bg-gradient-to-b from-black">
       <Container>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-start md:items-end w-full mb-6">
-          <div className="flex flex-col justify-end items-start">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-end w-full mb-6">
+          <div className="flex flex-col justify-end items-center md:items-start">
             <h3 className="my-5 text-white text-4xl tracking-widest">R-LINK</h3>
             <h6 className="my-5 text-white text-lg">
               Location Al-malki-Damascus-Syria
@@ -29,13 +29,13 @@ const Footer = () => {
               <Link
                 key={link.value}
                 href={link.value}
-                className="transition duration-200 pt-3 text-slate-300 hover:text-white text-base font-semibold leading-tight md:ml-5"
+                className="transition duration-200 pt-3 text-slate-300 hover:text-white text-base font-semibold leading-tight md:ml-5 text-center md:text-left"
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <div className="flex flex-col justify-end items-start">
+          <div className="flex flex-col justify-end items-center md:items-start">
             <h6 className="mt-5 mb-4 tracking-widest text-2xl ">
               Join Our Community
             </h6>
