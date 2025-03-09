@@ -3,12 +3,11 @@ import { Inter, Cairo, Montserrat } from "next/font/google";
 
 import "./globals.css";
 import Nav from "@/components/Nav";
-import MouseGlow from "@/components/MouseGlow";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+// const montserrat = Montserrat({ subsets: ["latin"] });
 const cairo = Cairo({ subsets: ["latin"] });
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "R-link",

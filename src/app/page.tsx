@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "@/components/home/Hero";
 import Partners from "@/components/home/Partners";
 import Solutions from "@/components/home/Solutions";
@@ -5,10 +7,39 @@ import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
 import FAQ from "./../components/home/FAQ";
 import MouseGlow from "@/components/MouseGlow";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Preloader from "./preloader/page";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+
+  //   function raf(time: any) {
+  //     lenis.raf(time);
+  //     console.log(lenis.scroll); // Logs the current scroll position
+  //     requestAnimationFrame(raf);
+  //   }
+
+  //   requestAnimationFrame(raf);
+  // }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
+  }, []);
+
   return (
     <>
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       <MouseGlow />
       <Hero />
       <Partners />
