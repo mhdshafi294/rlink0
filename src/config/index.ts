@@ -194,7 +194,7 @@ export const COMMUNITY_LINKS = [
     className: "bg-[#923a2a10] hover:bg-[#923a2a]",
   },
   {
-    link: "https://www.linkedin.com/company/werlinkco/",
+    link: "https://www.linkedin.com/company/rlinkbs",
     Icon: Linkedin,
     name: "Linkedin",
     className: "bg-[#0e76a810] hover:bg-[#0e76a8]",
